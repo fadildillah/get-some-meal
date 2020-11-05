@@ -1,3 +1,5 @@
+import imgLogo from '../../assets/meal.png';
+
 class AppNavbar extends HTMLElement {
     connectedCallback() {
         this.render();
@@ -16,7 +18,7 @@ class AppNavbar extends HTMLElement {
         this.innerHTML = `
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand d-inline-block align-top ml-sm-5" href="#">
-                <img src="src/assets/meal.png" alt="Meal">
+                <img src="${imgLogo}" alt="Meal">
                 <span class="h5 font-weight-bold">Get Some Meal</span>
             </a>
             <div id="search-container" class="form-inline">

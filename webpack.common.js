@@ -9,16 +9,19 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
-        rules: [{
-            test: /\.css$/,
-            use: [{
-                    loader: "style-loader"
-                },
-                {
-                    loader: "css-loader"
-                }
-            ]
-        }]
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: 'file-loader'
+            }
+        ]
     },
     optimization: {
         minimize: true,
